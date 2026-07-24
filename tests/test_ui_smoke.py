@@ -47,6 +47,9 @@ class CameraToolWindowSmokeTests(unittest.TestCase):
         if hasattr(self, "root") and self.root.winfo_exists():
             self.window.close()
 
+    def test_window_has_no_application_minimum_size(self):
+        self.assertEqual(self.root.minsize(), (1, 1))
+
     def test_switch_camera_after_render_then_switch_modes(self):
         self.window.refresh_devices()
         self.window._update_frames()

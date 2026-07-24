@@ -127,7 +127,6 @@ class CameraToolWindow:
     def _configure_window(self) -> None:
         self.root.title("PC 摄像头工具")
         self.root.geometry("1100x760")
-        self.root.minsize(760, 540)
         self.root.configure(background="#111827")
 
         style = ttk.Style(self.root)
